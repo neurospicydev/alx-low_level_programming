@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
 * main - Entry point
 * A simple C Program that prints a string
 *
