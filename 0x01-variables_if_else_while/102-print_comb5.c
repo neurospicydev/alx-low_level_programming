@@ -19,7 +19,7 @@ int main(void)
 	{
 		for (ones = '0'; ones <= '9'; ones++)
 		{
-			for (tenz = '0'; tenz <= '9'; tenz++)
+			for (tenz = tens; tenz <= '9'; tenz++)
 			{
 				for (onez = (tenz + 1); onez <= '9'; onez++)
 				{
