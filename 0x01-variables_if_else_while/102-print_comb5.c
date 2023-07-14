@@ -28,7 +28,7 @@ int main(void)
 					putchar(' ');
 					putchar(tenz);
 					putchar(onez);
-					if (!((tens == '8' && ones == '9')
+					if (!((tens == '9' && ones == '8')
 					&& (tenz == '9' && onez == '9')))
 					{
 						putchar(',');
