@@ -21,7 +21,7 @@ int main(void)
 		{
 			for (tenz = tens; tenz <= '9'; tenz++)
 			{
-				for (onez = (tenz + 1); onez <= '9'; onez++)
+				for (onez = (ones + 1); onez <= '9'; onez++)
 				{
 					putchar(tens);
 					putchar(ones);
