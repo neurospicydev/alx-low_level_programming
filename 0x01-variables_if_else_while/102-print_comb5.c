@@ -12,33 +12,24 @@ int main(void)
 {
 	int ones;
 	int tens;
-	int tenz;
-	int onez;
 
-	for (tens = '0'; tens <= '9'; tens++)
+	for (tens = 0; tens <= 98; tens++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (ones = tens + 1; ones <= 99; ones++)
 		{
-			for (tenz = tens; tenz <= '9'; tenz++)
-			{
-				for (onez = ones + 1; onez <= '9'; onez++)
-				{
-					putchar(tens);
-					putchar(ones);
-					putchar(' ');
-					putchar(tenz);
-					putchar(onez);
-					if (!((tens == '9' && ones == '8')
-					&& (tenz == '9' && onez == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				onez = '0';
-			}
+			putchar((tens / 10) + '0');
+			putchar((tens % 10) + '0');
+			putchar(' ');
+			putchar((ones / 10) + '0');
+			putchar((ones % 10) + '0');
+
+			if (tens == 98 && ones == 99)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }
