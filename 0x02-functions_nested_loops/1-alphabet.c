@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * main - a function that prints the alphabet
+ * print_alphabet - a function that prints the alphabet
  * in lower case followed by a new line using
  * custom _putchar function only twice
  *
  * Return: Always 0 (Success)
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	int alpha;
 
@@ -17,5 +17,4 @@ int main(void)
 		_putchar(alpha);
 	}
 	_putchar('\n');
-	return (0);
 }
