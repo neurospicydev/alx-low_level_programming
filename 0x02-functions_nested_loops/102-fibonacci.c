@@ -9,21 +9,21 @@
 
 int main(void)
 {
-	long a = 1;
-	long b = 2;
-	int count;
-	int num = 50;
+	int i;
+	long int fibonacci[50];
 
-	for (count = 1; count <= (num / 2); count++)
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
+
+	for (i = 2; i < 50; i++)
 	{
-		printf("%li %li ", a, b);
-		a += b;
-		b += a;
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if (i == 49)
+			printf("%ld\n", fibonacci[i]);
+		else
+			printf("%ld, ", fibonacci[i]);
 	}
-	if (num % 2 == 1)
-		printf("%li", a);
-
-	printf("\n");
 
 	return (0);
 }
