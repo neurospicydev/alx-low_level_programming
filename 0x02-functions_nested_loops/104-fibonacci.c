@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - A program that prints theprint first 98 Fibonacci numbers 
+ * main - A program that prints the print first 98 Fibonacci numbers
  * without using long long, malloc, pointers, array/tables, or structures
  * 
  * Return: Always 0 (Success)
