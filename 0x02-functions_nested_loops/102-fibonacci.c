@@ -9,19 +9,19 @@
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
+	long a = 1;
+	long b = 2;
 	int count;
 	int num = 50;
 
 	for (count = 1; count <= (num / 2); count++)
 	{
-		printf("%d %d ", a, b);
+		printf("%li %li ", a, b);
 		a += b;
 		b += a;
 	}
 	if (num % 2 == 1)
-		printf("%d", a);
+		printf("%li", a);
 
 	printf("\n");
 
