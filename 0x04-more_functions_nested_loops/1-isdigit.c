@@ -2,23 +2,25 @@
 #include <stdio.h>
 
 /**
-* _isdigit - A function that checks for a number
+* _isdigit - A function that checks for a digit
 * 0 through 9
-* @n: integer to check
+* @n: parameter of type integer
 *
-* Return: 1 if n is a number, and 0 otherwise
+* Return: 1 if n is a digit, and 0 otherwise
 */
 
 int _isdigit(int n)
 {
-	if (!(n >= 'a' && n <= 'z') && !(n >= 'A' && n <= 'Z'))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
-	printf("\n");
+	int i = '0'; /* range to traverse for check */
+	int isdigit = 0; /* init var to boolean value to 0 */
 
+	for (; i <= '9'; i++)
+	{
+		if (n == i)
+		{
+			isdigit = 1;
+			break; /* break out of loop if digit */
+		}
+	}
+	return (isdigit);
 }
