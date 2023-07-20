@@ -11,13 +11,13 @@
 
 int _isdigit(int n)
 {
-	if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z'))
+	if (!(n >= 'a' && n <= 'z') && !(n >= 'A' && n <= 'Z'))
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 	printf("\n");
 
