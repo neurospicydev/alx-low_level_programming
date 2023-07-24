@@ -24,7 +24,7 @@ void print_rev(char *s)
 	s = start;
 	for (; count >= 0; count--)
 	{
-		if (*s != '\0')
+		if (s[count] != '\0')
 		{
 			_putchar(s[count]);
 		}
