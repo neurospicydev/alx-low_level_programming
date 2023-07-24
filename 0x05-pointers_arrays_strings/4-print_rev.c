@@ -20,9 +20,9 @@ void print_rev(char *s)
 		s++;
 	}
 
-	count = len - 1;
+	count = len;
 	s = start;
-	for (; count > 0; count--)
+	for (; count >= 0; count--)
 	{
 		if (*s != '\0')
 		{
