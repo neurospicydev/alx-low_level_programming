@@ -13,19 +13,18 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	char *ptr = dest;
-	int len = _strlen(dest);
-	int i;
+	int len = 0;
+	int i; /* iterator */
 
-	while (*ptr != '\0')
+	while (dest[len]) /* calculate the length of dest */
 	{
-		ptr++;
+		len++;
 	}
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		dest[len + i] = src[i];
+		dest[len + i] = src[i]; /* append characters in correct position */
 	}
-	dest[len + i] = '\0';
+	dest[len + i] = '\0'; /* properly terminate dest string */
 	return (dest);
 }
