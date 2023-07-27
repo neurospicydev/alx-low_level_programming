@@ -1,5 +1,28 @@
 #include "main.h"
-#include <stdio.h>
+
+/**
+ * check_for_separator - A function that checks for specific seperators
+ * of letters
+ * @c: parameter, pointer of type char
+ *
+ * Return: Boolean
+ */
+
+int check_for_separator(char c)
+{
+	char sep[13] = {' ', '\t', ',', ';', '.',
+			'!', '?', '"', '(', ')', '\n', '{', '}'};
+	int i = 0;
+
+	for (; i < 13; i++)
+	{
+		if (c == sep[i])
+		{
+			return (1);
+		}
+	}
+	return (0);
+}
 
 /**
  * cap_string - A function that capitalises all words of a string
@@ -15,10 +38,7 @@ char *cap_string(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if ((str[i] >= 'a' && str[i] <= 'z')
-			&& (str[i - 1] == ' '
-			|| str[i - 1] == '.'
-			|| str[i - 1] == '\n'
-			|| str[i - 1] == '	'))
+			&& check_for_separator(str[i - 1]))
 		{
 			str[i] = str[i] - 32;
 		}
