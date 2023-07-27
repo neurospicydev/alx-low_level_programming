@@ -10,15 +10,16 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int i; /* iterator */
-
-	for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++) /* check for \0 */
+	while (*s1)
 	{
-		if (s1[i] != s2[i]) /* unequal chars break out of loop */
+		if (*s1 != *s2)
 		{
 			break;
 		}
+		s1++;
+		s2++;
 	}
+
 	/* return ascii difference after converting *char to unsigned *char */
 	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
