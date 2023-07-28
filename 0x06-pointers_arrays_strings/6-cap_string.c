@@ -37,8 +37,12 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z')
-			&& check_for_separator(str[i - 1]))
+		if ((str[i + 1] >= 'a' && str[i + 1] <= 'z')
+			&& check_for_separator(str[i]))
+		{
+			str[i + 1] = str[i + 1] - 32;
+		}
+		else if (i == 0 && (str[i] >= 'a' && str[i] <= 'z'))
 		{
 			str[i] = str[i] - 32;
 		}
