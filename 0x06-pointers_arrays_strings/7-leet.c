@@ -37,7 +37,7 @@ char *leet(char *str)
 	while (str[i] != '\0')
 	{
 		str[i] = _encode_character(str[i]);
-		str++;
+		i++;
 	}
 	return (str);
 }
