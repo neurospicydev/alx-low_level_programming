@@ -6,18 +6,19 @@
  * @nmemb: The destination char pointer variable to append source string
  * @size: size of bytes to allocate.
  *
- * Return: Void functions have no return value.
+ * Return: pointer to allocated space, or NULL on failure
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	char *ptr = malloc(nmemb * size);
+	char *ptr;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
 
