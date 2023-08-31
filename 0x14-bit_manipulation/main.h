@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-#define MAX_BINARY_LEN 1024
+
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
