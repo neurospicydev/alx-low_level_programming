@@ -6,7 +6,7 @@
  * the string given as a parameter
  * @str: string to duplicate
  *
- * Return: a pointer to the duplicated string, or NULL if 
+ * Return: a pointer to the duplicated string, or NULL if
  * insufficient memory was available.
  */
 
