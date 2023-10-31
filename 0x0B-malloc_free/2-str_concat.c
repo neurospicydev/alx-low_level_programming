@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
-* str_concat - A function that concatenates two strings
-* @s1: The destination string to append the source string
-* @s2: The source string that overwrites the terminating null byte
-* \0 at the end of s1, and then adds a terminating null byte
-*
-* Return: A pointer to a newly allocated space in memory
-* , or NULL on failure.
-*/
+ * str_concat - A function that concatenates two strings
+ * @s1: The destination string to append the source string
+ * @s2: The source string that overwrites the terminating null byte
+ * \0 at the end of s1, and then adds a terminating null byte
+ *
+ * Return: A pointer to a newly allocated space in memory
+ * , or NULL on failure.
+ */
 
-int _strlen(char *s);
 char *str_concat(char *s1, char *s2)
 {
 	char *p;
@@ -28,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (p == NULL)
 		return (NULL);
-	
+
 	for (i = 0; i < s1_length; i++)
 	{
 		p[i] = s1[i];
@@ -42,11 +41,11 @@ char *str_concat(char *s1, char *s2)
 }
 
 /**
-* _strlen - A function that returns the length of a string.
-* @s: string parameter of type char.
-*
-* Return: Always 0 (Success)
-*/
+ * _strlen - A function that returns the length of a string.
+ * @s: string parameter of type char.
+ *
+ * Return: Always 0 (Success)
+ */
 
 int _strlen(char *s)
 {
