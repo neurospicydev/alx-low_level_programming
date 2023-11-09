@@ -8,20 +8,19 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, j = 0;
+	int j = 0;
 	char *s;
 	va_list ap;
 
 	while (format == NULL)
-		return;
+		printf("\n");
 	va_start(ap, format);
 	while (format[j])
 	{
 		switch (format[j])
 		{
 			case 'i':
-				i = va_arg(ap, int);
-				printf("%d", i);
+				printf("%d", (int) va_arg(ap, int));
 				break;
 			case 'c':
 				printf("%c", (char) va_arg(ap, int));
