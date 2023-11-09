@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		switch (format[j])
 		{
 			case 'i':
-				printf("%d", (int) va_arg(ap, int));
+				printf("%d", va_arg(ap, int));
 				break;
 			case 'c':
 				printf("%c", (char) va_arg(ap, int));
