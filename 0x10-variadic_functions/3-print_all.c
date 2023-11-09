@@ -2,12 +2,10 @@
 
 /**
  * print_all - A function that prints anything
- * @format: list of format specifiers representing
- * the type of each argument
+ * @format: list of format specifiers for each argument
  *
  * Return: void functions have no return value
  */
-
 void print_all(const char * const format, ...)
 {
 	int i, j = 0;
@@ -15,11 +13,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 
 	while (format == NULL)
-	{
-		printf("\n");
 		return;
-	}
-
 	va_start(ap, format);
 	while (format[j])
 	{
